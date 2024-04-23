@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <div class="logo">
+                <img src="data:image/png;base64,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"
+                    alt="">
+            </div>
+            <div class="left_option">
+                <i class="fa-solid fa-house"></i>
+                <div class="text">Home</div>
+            </div>
+            <div class="left_option">
+                <i class="fa-solid fa-magnifying-glass"></i>Search
+            </div>
+            <div class="left_option">
+                <i class="fa-regular fa-compass"></i>Explore
+            </div>
+            <div class="left_option">
+                <i class="fa-solid fa-video"></i>Reels
+            </div>
+            <div class="left_option">
+                <i class="fa-brands fa-facebook-messenger"></i> Message
+            </div>
+            <div class="left_option">
+                <i class="fa-regular fa-heart"></i>Notification
+            </div>
+            <div class="left_option">
+                <i class="fa-solid fa-plus"></i>Create
+            </div>
+            <div class="left_option">
+                <i class="fa-regular fa-user"></i>Profile
+            </div>
+            <div class="more_option">
+                <div class="threads">
+                    <i class="fa-brands fa-threads"></i>Threads
+                </div>
+                <div class="more">
+                    <i class="fa-solid fa-bars"></i>More
+                </div>
+            </div>
+
+        </div>
+        <div id="middle">
+            <div id="story_container">
+                <div class="story_profile">
+                    <div class="circle">
+                       <img src="https://qph.cf2.quoracdn.net/main-qimg-7e4f8cbb322e0ec8dc4cc5835d3ee449-lq" alt="">
+                    </div>
+                    <div class="text_story"> @sunshine</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://assets.entrepreneur.com/content/1x1/300/1689717916-JJ1.jpg?format=pjeg&auto=webp" alt="">
+                     </div>
+                    <div class="text_story">manusii</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGEKWOzEa-KJIDF_Wv1SMW58EhSSQbkvHNbB0-NA2IvMbUoRWXQCyXzb0t_zMA2nFVZ0&usqp=CAU" alt="">
+
+                      </div>
+                    <div class="text_story">lilmisscutie</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://assets.entrepreneur.com/content/1x1/300/20170524194410-IanSmall.jpeg?format=pjeg&auto=webp" alt="">
+                    </div>
+                    <div class="text_story">heylima</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://qph.cf2.quoracdn.net/main-thumb-221437051-200-uwybhhljjxyshwoiabsctechmxfjpjoi.jpeg" alt="">
+                    </div>
+                    <div class="text_story">princess</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://pics.craiyon.com/2023-09-30/7449a0799246470cb31b6de57a7c0a7a.webp" alt="">
+                    </div>
+                    <div class="text_story">Queen_5</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://qph.cf2.quoracdn.net/main-thumb-83610125-200-xcnadvbelczbjtpbwbivdbmtsgirbjyz.jpeg" alt="">
+                    </div>
+                    <div class="text_story">naulima..</div>
+                </div>
+
+             <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://pics.craiyon.com/2023-06-12/c104cf15a34e416c92acbaaa0d1455d7.webp" alt="">
+                    </div>
+                    <div class="text_story">vibewithher</div>
+                </div>
+                <div class="story_profile">
+               
+                    <div class="circle">
+                        <img src="https://qph.cf2.quoracdn.net/main-qimg-7e4f8cbb322e0ec8dc4cc5835d3ee449-lq" alt="">
+
+                    </div>
+                    <div class="text_story">manusii</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://qph.cf2.quoracdn.net/main-thumb-83610125-200-xcnadvbelczbjtpbwbivdbmtsgirbjyz.jpeg" alt="">
+                    </div>
+                    <div class="text_story">lura</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://pics.craiyon.com/2023-09-09/437294875e334e909d7ee83be09610b4.webp" alt="">
+                    </div>
+                    <div class="text_story"> vibeyou</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXFD6Y7ip-skK0DV30BxYijs11iC_bXUwr-iTvR4JB9kklXykQ-QmQCiXb24neRYv5nMM&usqp=CAU" alt="">
+                    </div>
+                    <div class="text_story">Not_me</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://qph.cf2.quoracdn.net/main-qimg-7e4f8cbb322e0ec8dc4cc5835d3ee449-lq" alt="">
+                    </div>
+                    <div class="text_story">lima</div>
+                </div>
+                <div class="story_profile">
+                    <div class="circle">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGEKWOzEa-KJIDF_Wv1SMW58EhSSQbkvHNbB0-NA2IvMbUoRWXQCyXzb0t_zMA2nFVZ0&usqp=CAU" alt="">
+                    </div>
+                    <div class="text_story">naulima..</div>
+                </div>
+                
+
+
+            </div>
+            <div id="post_container">
+                <div class="post_profile_info">
+                    <div class="profile_info">
+                        <div class="profile_circle">
+                            <img src="https://qph.cf2.quoracdn.net/main-qimg-7e4f8cbb322e0ec8dc4cc5835d3ee449-lq" alt="">
+                         </div>
+                        <div class="profile_name">Aishwarya Rai<span> <i class="fa-duotone fa-circle"></i> 2 d</div>
+                    </div>
+                    <!-- <div class="profile_circle">Abhimanyu</div> -->
+                    <div class="menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="post_content">
+                    <img src=" https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                        " alt="">
+                 </div>
+                  <div class="like_share_sec">
+                    <div class="like_share_icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <div class="right_icon">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                 </div>
+                 <div id="likes_count">69 likes</div>
+                 <div id="bio_of_post">
+                    Dressed to impress, ready to succeed. ... 📸 Discover the...
+                    need to zoom in to get the bigger picture
+                 </div>
+                 <div id="views_comment">View all 235 comments
+                 </div>
+                 <div class="comment_by_other">
+                    <div id="comments">
+                        <div class="user_id">Dhoni_69_X</div>
+                        <div class="user_comment"> Nice pic dear 😌
+                            😍</div>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+
+                    
+                </div>
+                <div id="add_comment_section">
+                    <div class="add_comment">
+                        <input type="text" placeholder="Add a Comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+
+                <div id="boder">
+                    <div class="line"></div>
+                </div>
+
+              <!-- //2second -->
+            </div>
+            <div id="post_container">
+                <div class="post_profile_info">
+                    <div class="profile_info">
+                        <div class="profile_circle">
+                            <img src="https://pics.craiyon.com/2023-09-09/437294875e334e909d7ee83be09610b4.webp" alt="">
+
+                        </div>
+                        <div class="profile_name">Shakira <span> <i class="fa-duotone fa-circle"></i> 18 h</span></div>
+                    </div>
+                    <!-- <div class="profile_circle">Abhimanyu</div> -->
+                    <div class="menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="post_content">
+                    <img src="https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.
+                    3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                 </div>
+                  <div class="like_share_sec">
+                    <div class="like_share_icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <div class="right_icon">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                 </div>
+                 <div id="likes_count">69 likes</div>
+                 <div id="bio_of_post">
+                    Nat Geo Photographer Anand Varma knows that sometimes you
+                    need to zoom in to get the bigger picture 📸 Discover the...
+                    need to zoom in to get the bigger picture
+                 </div>
+                 <div id="views_comment">View all 235 comments
+                 </div>
+                 <div class="comment_by_other">
+                    <div id="comments">
+                        <div class="user_id">jannatzubair29</div>
+                        <div class="user_comment"> Kya baat hai 👏</div>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+
+                    
+                </div>
+                <div id="add_comment_section">
+                    <div class="add_comment">
+                        <input type="text" placeholder="Add a Comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+
+                <div id="boder">
+                    <div class="line"></div>
+                </div>
+
+  <!-- 3rd post -->
+  
+            </div>
+           
+            <div id="post_container">
+                <div class="post_profile_info">
+                    <div class="profile_info">
+                        <div class="profile_circle">
+                            <img src="https://1.bp.blogspot.com/-gQhx7qiVDNQ/VSVEbRU3BSI/AAAAAAAAFHM/yV3914fXt9Y/s1600/girl-photo-for-facebook-profile-4.jpg" alt="">
+
+                        </div>
+                        <div class="profile_name">Jeff Natto <span> <i class="fa-duotone fa-circle"></i> 18 h</span></div>
+                    </div>
+                    <!-- <div class="profile_circle">Abhimanyu</div> -->
+                    <div class="menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="post_content">
+                    <img src="https://plus.unsplash.com/premium_photo-1708275671991-6b8514fc53ee?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                 </div>
+                  <div class="like_share_sec">
+                    <div class="like_share_icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <div class="right_icon">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                 </div>
+                 <div id="likes_count">544 likes</div>
+                 <div id="bio_of_post">
+                    Your attitude determines your direction
+                 </div>
+                 <div id="views_comment">View all 235 comments
+                 </div>
+                 <div class="comment_by_other">
+                    <div id="comments">
+                        <div class="user_id">Shreya_420</div>
+                        <div class="user_comment">Fantastic😌
+                            😍</div>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+
+                    
+                </div>
+                <div id="add_comment_section">
+                    <div class="add_comment">
+                        <input type="text" placeholder="Add a Comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+
+                <div id="boder">
+                    <div class="line"></div>
+                </div>
+
+  <!-- 3rd post -->
+  
+            </div>
+            <div id="post_container">
+                <div class="post_profile_info">
+                    <div class="profile_info">
+                        <div class="profile_circle">
+                            <img src="https://qph.cf2.quoracdn.net/main-qimg-7e4f8cbb322e0ec8dc4cc5835d3ee449-lq" alt="">
+                         </div>
+                        <div class="profile_name">Aishwarya Rai<span> <i class="fa-duotone fa-circle"></i> 2 d</div>
+                    </div>
+                    <!-- <div class="profile_circle">Abhimanyu</div> -->
+                    <div class="menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="post_content">
+                    <img src="https://images.unsplash.com/photo-1706565029407-ab76421be144?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+                 </div>
+                  <div class="like_share_sec">
+                    <div class="like_share_icon">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <div class="right_icon">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                 </div>
+                 <div id="likes_count">69 likes</div>
+                 <div id="bio_of_post">
+                    Dressed to impress, ready to succeed. ... 📸 Discover the...
+                    need to zoom in to get the bigger picture
+                 </div>
+                 <div id="views_comment">View all 235 comments
+                 </div>
+                 <div class="comment_by_other">
+                    <div id="comments">
+                        <div class="user_id">Dhoni_69_X</div>
+                        <div class="user_comment"> Nice pic dear 😌
+                            😍</div>
+                    </div>
+                    <i class="fa-regular fa-heart"></i>
+
+                    
+                </div>
+                <div id="add_comment_section">
+                    <div class="add_comment">
+                        <input type="text" placeholder="Add a Comment">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                </div>
+
+                <div id="boder">
+                    <div class="line"></div>
+                </div>
+
+              <!-- //2second -->
+            </div>
+        </div>
+        <div id="right">
+            <div class="follower_box">
+                <div class="follower_info">
+                    <div class="follower_photo">
+                        <img src="https://images.unsplash.com/photo-1706565029407-ab76421be144?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                     </div>
+                    <div class="text1">
+                        <h5>spider_69</h5>
+                        <div class="text2">
+                            <h5>spiderman</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="switch_option">
+                    <h6>Switch</h6>
+                </div>
+            </div>
+            <div class="suggestion">
+                <div class="sugg_text">
+                    <h6>Suggestion for you</h6>
+                </div>
+                <div class="see_all">
+                    <h6>see all</h6>
+                </div>
+            </div>
+            <div class="follower_box">
+                <div class="follower_info">
+                    <div class="follower_photo">
+                    <img src="https://1.bp.blogspot.com/-gQhx7qiVDNQ/VSVEbRU3BSI/AAAAAAAAFHM/yV3914fXt9Y/s1600/girl-photo-for-facebook-profile-4.jpg" alt="">
+                    </div>
+                    <div class="text1">
+                        <h5>Priya_66</h5>
+                        <div class="text2">
+                            <h5>priyanka</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="switch_option">
+                    <h6> Follow</h6>
+                </div>
+            </div>
+            <div class="follower_box">
+                <div class="follower_info">
+                    <div class="follower_photo">
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyZuIAczKprlpndMM6nUaCx2nDi3NTYsuipZhBY27cAA&s" alt="">
+                    </div>
+                    <div class="text1">
+                        <h5>Billi_boy</h5>
+                        <div class="text2">
+                            <h5>bill noai</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="switch_option">
+                    <h6>Follow</h6>
+                </div>
+            </div>
+            <div class="follower_box">
+                <div class="follower_info">
+                    <div class="follower_photo">
+ <img src="https://www.shutterstock.com/image-photo/close-head-shot-confident-serious-260nw-1481322794.jpg" alt="">
+                    </div>
+                    <div class="text1">
+                        <h5>Loura_79</h5>
+                        <div class="text2">
+                            <h5>Loura gate</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="switch_option">
+                    <h6>Follow</h6>
+                </div>
+            </div>
+            <div class="follower_box">
+                <div class="follower_info">
+                    <div class="follower_photo">
+ <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2ZpbGUlMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+                    </div>
+                    <div class="text1">
+                        <h5>Gatenode</h5>
+                        <div class="text2">
+                            <h5>NO name</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="switch_option">
+                    <h6>Follow </h6>
+                </div>
+            </div>
+            <div class="follower_box">
+                <div class="follower_info">
+                    <div class="follower_photo">
+ <img src="https://static.vecteezy.com/system/resources/thumbnails/010/260/479/small/default-avatar-profile-icon-of-social-media-user-in-clipart-style-vector.jpg" alt="">
+                    </div>
+                    <div class="text1">
+                        <h5>Muna_bhiaya</h5>
+                        <div class="text2">
+                            <h5>monty minty</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="switch_option">
+                    <h6> Follow</h6>
+                </div>
+            </div>
+            <div class="follower_box">
+                <div class="follower_info">
+                    <div class="follower_photo">
+ <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa0djBDrxWaIdgVh1Hv_QDDTh8NbTfv5jg5vIAkK4yaJjE9BBOD9Q-qdWmnjDzuYDMQvc&usqp=CAU" alt="">
+                    </div>
+                    <div class="text1">
+                        <h5>cool_boyRahul</h5>
+                        <div class="text2">
+                            <h5>Rahul yadav</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="switch_option">
+                    <h6>Follow</h6>
+                </div>
+            </div>
+            <div class="last">
+                <p>About
+                    Help
+                    Press
+                    API
+                    Jobs
+                    Privacy
+                    Terms
+                    Locations
+                    Language
+                    Meta Verified</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
