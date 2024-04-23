@@ -58,13 +58,11 @@ html,body{
     gap: 15px;
     height:48px;
     width: 220px;
-    /* background-color: rgb(134, 76, 76); */
-}
+ }
 .left_option i{
     font-size: 24px;
     width: 24px;
-    /* font-weight: 600; */
-
+ 
 }
 .left_option:hover{
     cursor: pointer;
@@ -103,8 +101,7 @@ html,body{
     align-items: center;
     height: 48px;
     width:220px;
-    /* background-color: rgb(96, 149, 195); */
-}
+ }
 .more_option .more{
     margin: 4px 0;
     padding: 12px;
@@ -113,8 +110,7 @@ html,body{
     align-items: center;
     height: 48px;
     width:220px;
-    /* background-color: rgb(85, 161, 227); */
-}
+ }
 #middle{
     height: 100%;
     width: 800px;
@@ -141,11 +137,11 @@ padding: 5px;
     margin: 16px 0 0;
     height:101px;
     width: 635px;
-    /* background-color: rgb(130, 92, 243); */
+   
 }
 
 #story_container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Webkit browsers */
+    display: none;  
 }
 
 .story_profile{
@@ -161,8 +157,7 @@ padding: 5px;
     border-radius: 50%;
     overflow: hidden; 
     background: linear-gradient(to right, red, rgb(212, 115, 212));  
-    /* position: relative; */
-    /* overflow: hidden; */
+    
     border: 3px solid transparent;
 }
 .circle:hover{
@@ -170,9 +165,9 @@ padding: 5px;
 }
 .circle img {
     object-position: center;
-    max-width: 100%; /* Ensure the image fits within the circle */
-    max-height: 100%; /* Ensure the image fits within the circle */
-    border-radius: 50%; /* Ensure the image is clipped to a circle */
+    max-width: 100%;  
+    max-height: 100%;  
+    border-radius: 50%;  
     object-fit: cover ;
   
 }
